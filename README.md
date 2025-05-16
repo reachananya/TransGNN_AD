@@ -8,7 +8,7 @@ Official implementation of "TransGNN-AD: Transductive Graph Neural Networks with
 
 TransGNN-AD is a comprehensive framework for Alzheimer's disease (AD) classification using diffusion MRI data through graph neural network architectures in a transductive learning setup. Our approach leverages brain connectivity networks built from tractography-derived fiber counts between regions of interest and engineers histogram-based connectivity features that effectively represent connectivity distribution patterns.
 
-![TransGNN-AD Pipeline](https://github.com/reachananya/TransGNN-AD/raw/main/images/BMVC_Flowchart_ver4.png)
+![TransGNN-AD Pipeline](images/BMVC_Flowchart_ver9.png)
 
 The pipeline consists of three main stages:
 1. **Preprocessing** of diffusion MRI data, including tensor fitting and deterministic tractography
