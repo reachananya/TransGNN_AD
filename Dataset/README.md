@@ -45,7 +45,13 @@ To process the raw ADNI DTI data, use the scripts in the `preprocessing_pipeline
 
 1. `Step1_DICOM_to_NIfTI_conversion.py` - Converts DICOM files to NIfTI format
 2. `Step2_Finding_Quantitative_Parameters.py` - Extracts DTI metrics like FA (Fractional Anisotropy) and MD (Mean Diffusivity)
-3. `Step3_DTIODFmodel_final_ADNI_full_pipeline.py` - Processes the data for the TransGNN-AD model
+3. `Step3_DTIODFmodel_final_ADNI_full_pipeline.py` - Processes DTI data using deterministic tractography models
+4. `Step4_Generate_Diffusion_Tensor.py` - Creates diffusion tensor models from processed DTI data
+5. `Step5_JHU_label_registration.py` - Registers brain regions using JHU brain atlas for anatomical reference
+6. `Step6_Final_coordinate_selection.py` - Selects specific fiber tract coordinates for connectivity analysis
+7. `Step7_histogram_feature.py` - Generates histogram-based features for the TransGNN-AD model
+
+Each script has specific requirements and dependencies which are listed in the project's main `requirements.txt` file. For detailed usage of each script, please refer to the comments and documentation within each file.
 
 ## Dataset Structure
 
