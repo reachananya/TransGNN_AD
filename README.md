@@ -20,7 +20,7 @@ The pipeline consists of three main stages:
 ```
 TransGNN-AD/
 ├── Classification/               # Classification code for CN vs MCI and CN vs AD
-│   ├── Inductive/              # Traditional ML methods (SVM, Random Forest, MLP)
+│   ├── Inductive/              # Traditional ML methods (SVM, Random Forest, MLP, Transformer)
 │   └── Transductive_graph/                    # Graph-based methods (GCN, GAT)
 ├── preprocessing_code/           # Preprocessing pipeline for diffusion MRI data
 │   ├── Step1_*.py             # DICOM to NIfTI conversion 
@@ -79,7 +79,7 @@ The preprocessing pipeline consists of 7 steps, with notebooks provided for each
 ### Classification
 
 Available options:
-- `--model`: svm, rf, mlp, gcn, gat
+- `--model`: svm, rf, mlp, transformer, gcn, gat
 - `--task`: CN_vs_MCI, CN_vs_AD
 
 ## Results
