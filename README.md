@@ -59,10 +59,6 @@ TransGNN-AD/
 
 We use diffusion MRI data from the Alzheimer's Disease Neuroimaging Initiative (ADNI) database. Due to data access restrictions, users need to apply for access to the ADNI database directly.
 
-For information on how to obtain the data, run:
-```bash
-python download_dataset.py
-```
 
 An example subject with the expected data structure is provided in the `Dataset/example_subject/` directory.
 
