@@ -20,19 +20,18 @@ The pipeline consists of three main stages:
 ```
 TransGNN-AD/
 ├── Classification/               # Classification code for CN vs MCI and CN vs AD
-│   ├── traditional/              # Traditional ML methods (SVM, Random Forest, MLP)
-│   └── graph/                    # Graph-based methods (GCN, GAT)
+│   ├── Inductive/              # Traditional ML methods (SVM, Random Forest, MLP)
+│   └── Transductive_graph/                    # Graph-based methods (GCN, GAT)
 ├── preprocessing_code/           # Preprocessing pipeline for diffusion MRI data
-│   ├── Step1_*.ipynb             # DICOM to NIfTI conversion 
-│   ├── Step2_*.ipynb             # Quantitative parameter extraction
-│   ├── Step3_*.ipynb             # DTI model and tractography 
-│   ├── Step4_*.ipynb             # Diffusion tensor generation
-│   ├── Step5_*.ipynb             # JHU atlas registration
-│   ├── Step6_*.ipynb             # ROI-specific parameter extraction
-│   └── Step7_*.ipynb             # Histogram feature generation
+│   ├── Step1_*.py             # DICOM to NIfTI conversion 
+│   ├── Step2_*.py             # Quantitative parameter extraction
+│   ├── Step3_*.py             # DTI model and tractography 
+│   ├── Step4_*.py             # Diffusion tensor generation
+│   ├── Step5_*.py             # JHU atlas registration
+│   ├── Step6_*.py             # ROI-specific parameter extraction
+│   └── Step7_*.py             # Histogram feature generation
 ├── Dataset/                      # Sample dataset and instructions
 │   └── example_subject/          # Example subject with raw data and preprocessed features
-├── download_dataset.py           # Instructions and utilities for ADNI data access
 ├── requirements.txt              # Package dependencies
 └── README.md                     # Main documentation
 ```
@@ -82,18 +81,6 @@ The preprocessing pipeline consists of 7 steps, with notebooks provided for each
 2. Follow subsequent steps (2-7) in order to generate the histogram features for classification.
 
 ### Classification
-
-For traditional machine learning classification:
-```bash
-cd Classification/traditional
-python run_classification.py --model svm --task CN_vs_MCI
-```
-
-For graph-based classification:
-```bash
-cd Classification/graph
-python run_classification.py --model gcn --task CN_vs_MCI
-```
 
 Available options:
 - `--model`: svm, rf, mlp, gcn, gat
